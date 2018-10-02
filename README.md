@@ -2,8 +2,7 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-
-#### To be continued from: Try Angular v4 // 6 of 28 // ngFor and ngIf
+#### To be continued from: Try Angular v4 // 8 of 28 // Dynamic Routing of Components
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
@@ -27,4 +26,5 @@ ng g component video-detail
 ### Selectors & Component
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
+### Dynamic Routing of Components
 
