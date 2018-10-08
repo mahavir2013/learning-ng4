@@ -6,29 +6,23 @@
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
-
 [Angular Setup, Install, & Build Guide](https://kirr.co/ne8vf9)
+	mkdir learning-ng4 && cd learning-ng4
+	ng new client
 
-mkdir learning-ng4 && cd learning-ng4
-
-ng new client
-
-Check versions: node -v, npm -v, ng -v
+Check versions:
+- node -v, npm -v, ng -v
 
 ### App Module & Component
 ### Ng Generate New Component
-ng g component newComponentName
-
-ng g component videoList
-
-ng g component video-detail
-
+	ng g component newComponentName
+	ng g component videoList
+	ng g component video-detail
 ### Selectors & Component
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
 - Link: https://angular.io/guide/router
-
-RouterModule.forRoot(appRoutes);
+	RouterModule.forRoot(appRoutes);
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
@@ -42,7 +36,6 @@ RouterModule.forRoot(appRoutes);
 	this.sanitizer.bypassSecurityTrustResourceUrl(url);
 ### Pipes & Custom Pipes
 - Link: https://angular.io/guide/pipes
-
 	{{todayDate | date: 'short'}}
 	[src]="getEmbedUrl(item) | safe"
 	transform(value: any, args?: any): any {
