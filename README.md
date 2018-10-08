@@ -24,6 +24,7 @@ Check versions:
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
 - Link: https://angular.io/guide/router
+
 	RouterModule.forRoot(appRoutes);
 
 ### Dynamic Routing of Components
