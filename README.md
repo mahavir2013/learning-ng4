@@ -8,6 +8,7 @@
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
 
 [Angular Setup, Install, & Build Guide](https://kirr.co/ne8vf9)
+
 	mkdir learning-ng4 && cd learning-ng4
 	ng new client
 
@@ -23,8 +24,8 @@ Check versions:
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
 - Link: https://angular.io/guide/router
-
 	RouterModule.forRoot(appRoutes);
+
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
