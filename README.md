@@ -36,14 +36,15 @@ RouterModule.forRoot(appRoutes);
 	  console.log(params);
 	});
 ### Safely Embed a Video
-<div [innerHTML]="'<h1>Hi There</h1>'"></div>
-<div [innerHTML]="item.embed"></div>
-import { DomSanitizer } from '@angular/platform-browser';
-this.sanitizer.bypassSecurityTrustResourceUrl(url);
+	<div [innerHTML]="'<h1>Hi There</h1>'"></div>
+	<div [innerHTML]="item.embed"></div>
+	import { DomSanitizer } from '@angular/platform-browser';
+	this.sanitizer.bypassSecurityTrustResourceUrl(url);
 ### Pipes & Custom Pipes
 - Link: https://angular.io/guide/pipes
-- {{todayDate | date: 'short'}}
-- [src]="getEmbedUrl(item) | safe"
+
+	{{todayDate | date: 'short'}}
+	[src]="getEmbedUrl(item) | safe"
 	transform(value: any, args?: any): any {
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
 	}
