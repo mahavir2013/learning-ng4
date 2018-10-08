@@ -6,6 +6,7 @@
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
+
 [Angular Setup, Install, & Build Guide](https://kirr.co/ne8vf9)
 	mkdir learning-ng4 && cd learning-ng4
 	ng new client
