@@ -2,7 +2,7 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-#### To be continued from: Try Angular v4 // 8 of 28 // Dynamic Routing of Components
+#### To be continued from: Try Angular v4 // 11 of 28 // Rapid Bootstrap 3 Overview
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
@@ -26,5 +26,57 @@ ng g component video-detail
 ### Selectors & Component
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
+- Link: https://angular.io/guide/router
+
+RouterModule.forRoot(appRoutes);
 ### Dynamic Routing of Components
+import { ActivatedRoute } from '@angular/router';
+
+	A provider allows us to work with route
+	
+	this.route.params.subscribe(params => {
+	
+	  console.log(params);
+	  
+	});
+### Safely Embed a Video
+<div [innerHTML]="'<h1>Hi There</h1>'"></div>
+<div [innerHTML]="item.embed"></div>
+import { DomSanitizer } from '@angular/platform-browser';
+this.sanitizer.bypassSecurityTrustResourceUrl(url);
+### Pipes & Custom Pipes
+- Link: https://angular.io/guide/pipes
+- {{todayDate | date: 'short'}}
+- [src]="getEmbedUrl(item) | safe"
+	
+	transform(value: any, args?: any): any {
+	
+		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
+	
+	}
+
+### Rapid Bootstrap 3 Overview
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
