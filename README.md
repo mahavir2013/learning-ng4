@@ -40,9 +40,9 @@ Check versions:
 	this.sanitizer.bypassSecurityTrustResourceUrl(url);
 ### Pipes & Custom Pipes
 - Link: https://angular.io/guide/pipes
-
-	{{todayDate | date: 'short'}}
-	[src]="getEmbedUrl(item) | safe"	
+- {{todayDate | date: 'short'}}
+- [src]="getEmbedUrl(item) | safe"
+	
 	transform(value: any, args?: any): any {
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
 	}
