@@ -30,14 +30,10 @@ ng g component video-detail
 
 RouterModule.forRoot(appRoutes);
 ### Dynamic Routing of Components
-import { ActivatedRoute } from '@angular/router';
-
+	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
-	
 	this.route.params.subscribe(params => {
-	
 	  console.log(params);
-	  
 	});
 ### Safely Embed a Video
 <div [innerHTML]="'<h1>Hi There</h1>'"></div>
@@ -48,13 +44,9 @@ this.sanitizer.bypassSecurityTrustResourceUrl(url);
 - Link: https://angular.io/guide/pipes
 - {{todayDate | date: 'short'}}
 - [src]="getEmbedUrl(item) | safe"
-	
 	transform(value: any, args?: any): any {
-	
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
-	
 	}
-
 ### Rapid Bootstrap 3 Overview
 
 
