@@ -44,9 +44,7 @@ Check versions:
 - [src]="getEmbedUrl(item) | safe"
 	
 	transform(value: any, args?: any): any {
-	
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
-		
 	}
 ### Rapid Bootstrap 3 Overview
 
