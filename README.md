@@ -1,4 +1,4 @@
-# learning-ng4: https://github.com/mahavir2013/learning-ng4
+# [learning-ng4](https://github.com/mahavir2013/learning-ng4)
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
