@@ -2,7 +2,7 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-#### To be continued from: Try Angular v4 // 11 of 28 // Rapid Bootstrap 3 Overview
+#### To be continued from: Try Angular v4 // 13 of 28 // ngx bootstrap carousel
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
@@ -48,9 +48,13 @@ Check versions:
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
 		
 	}
-### Rapid Bootstrap 3 Overview
+### Bootstrap for Angular // ngx bootstrap
+	npm install ngx-bootstrap --save
+	import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+	imports: [BsDropdownModule.forRoot(),...]
 
-
+### ngx bootstrap carousel
+ng g component home
 
 
 
