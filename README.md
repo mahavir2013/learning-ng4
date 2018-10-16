@@ -67,11 +67,13 @@ Check versions:
 	</carousel>
 
 ###Angular Click Events
+
 	(click)="eventCallback($event)"
 	import { Router } from '@angular/router';
 	this.router.navigate(['./videos']);
 
 ###Http Requests
+
 	import { HttpModule } from '@angular/http';
 	imports: [HttpModule, ...]
 	
