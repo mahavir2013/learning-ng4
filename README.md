@@ -2,7 +2,7 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-#### To be continued from: Try Angular v4 // 13 of 28 // ngx bootstrap carousel
+#### To be continued from: Try Angular v4 // 16 of 28 // Http & Featured
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
@@ -30,9 +30,11 @@ Check versions:
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
-	this.route.params.subscribe(params => {
+	private route: ActivatedRoute
+	this.routeSub = this.route.params.subscribe(params => {
 	  console.log(params);
 	});
+	this.routeSub.unsubscribe();
 ### Safely Embed a Video
 	<div [innerHTML]="'<h1>Hi There</h1>'"></div>
 	<div [innerHTML]="item.embed"></div>
@@ -57,9 +59,45 @@ Check versions:
 	dropdown, dropdownToggle, *dropdownMenu
 
 ### ngx bootstrap carousel
-ng g component home
+	ng g component home
+	import { CarouselModule } from 'ngx-bootstrap/carousel';
+	imports: [CarouselModule.forRoot(),...]
+	<carousel ...>
+		<slide>...</slide>
+	</carousel>
 
+###Angular Click Events
+	(click)="eventCallback($event)"
+	import { Router } from '@angular/router';
+	this.router.navigate(['./videos']);
 
+###Http Requests
+	import { HttpModule } from '@angular/http';
+	imports: [HttpModule, ...]
+	
+	import { Http } from '@angular/http';
+	private req: any;
+	videoList: [any];
+	
+	constructor(private http: Http)
+	ngOnInit() {
+		this.req = this.http.get('/assets/json/videos.json').subscribe(data => {
+			console.log(data.json());
+			this.videoList = data.json() as [any];
+		  
+			data.json().filter(item => {
+				if (item.slug === this.slug) {
+					this.video = item;
+				}
+			});
+		});
+	}
+	ngOnDestroy() {
+		this.req.unsubscribe();
+	}
+	{{video?.name}}
+
+###Http & Featured
 
 
 

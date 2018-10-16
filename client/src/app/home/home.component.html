@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-12">
+    <carousel class="text-center">
+      <slide *ngFor="let imageObj of homeImageList">
+        <a href="videos/video-1" (click)="preventNormal($event, imageObj)">
+          <img class="img-main-carousel" [src]="imageObj.image" alt="first slide">
+        </a>
+        <div class="carousel-caption">
+          <h3>{{imageObj.title}}</h3>
+          <p><a class="btn btn-default" href="{{imageObj.link}}">Video 1</a></p>
+        </div>
+      </slide>
+      <!-- <slide>
+        <a #imageTwo href="videos/video-1" (click)="preventNormal($event, imageTwo)">
+          <img class="img-main-carousel" src="assets/images/nature/5.jpg" alt="second slide">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p><a class="btn btn-default" href="videos/video-1">Video 1</a></p>
+        </div>
+      </slide>
+      <slide>
+        <a #imageThree href="videos/video-1" (click)="preventNormal($event, imageThree)">
+          <img class="img-main-carousel" src="assets/images/nature/6.jpg" alt="third slide">
+        </a>
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          <p><a class="btn btn-default" href="videos/video-1">Video 1</a></p>
+        </div>
+      </slide> -->
+    </carousel>
+  </div>
+</div>

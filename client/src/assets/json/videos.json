@@ -1,0 +1,13 @@
+[{
+  "name": "Welcome",
+  "slug": "item-1",
+  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI"
+}, {
+  "name": "Item 2",
+  "slug": "item-2",
+  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI"
+}, {
+  "name": "Item 3",
+  "slug": "item-3",
+  "embed": null
+}]
