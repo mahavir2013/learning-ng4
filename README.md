@@ -66,14 +66,12 @@ Check versions:
 		<slide>...</slide>
 	</carousel>
 
-###Angular Click Events
-
+### Angular Click Events
 	(click)="eventCallback($event)"
 	import { Router } from '@angular/router';
 	this.router.navigate(['./videos']);
 
-###Http Requests
-
+### Http Requests
 	import { HttpModule } from '@angular/http';
 	imports: [HttpModule, ...]
 	
@@ -99,7 +97,7 @@ Check versions:
 	}
 	{{video?.name}}
 
-###Http & Featured
+### Http & Featured
 
 
 
