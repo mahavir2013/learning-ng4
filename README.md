@@ -2,7 +2,7 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-#### To be continued from: Try Angular v4 // 16 of 28 // Http & Featured
+#### To be continued from: Try Angular v4 // 20 of 28 // Passing Data to Components
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
@@ -67,7 +67,9 @@ Check versions:
 	</carousel>
 
 ### Angular Click Events
-	(click)="eventCallback($event)"
+	<a #imageElement href="videos/video-1" (click)="eventCallback($event, imageElement)">
+	  <img class="img-main-carousel" src="assets/images/nature/4.jpg" alt="second slide">
+	</a>
 	import { Router } from '@angular/router';
 	this.router.navigate(['./videos']);
 
@@ -97,7 +99,41 @@ Check versions:
 	}
 	{{video?.name}}
 
-### Http & Featured
+### Two Way Data Binding
+import { FormsModule } from '@angular/forms';
+<input type="text" class="form-control" placeholder="Search" name="Search" [(ngModel)]="searchQuery">
+If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
+
+### ngForm Basics
+- Link: https://angular.io/guide/forms
+		https://angular.io/api/forms/NgForm
+
+	<form #myForm="ngForm" (ngSubmit)="submitForm($event, myForm)">
+	<input type="text" name="q" [(ngModel)]="myModelName">
+	submitSearch(event: Event, formData) {
+		let query = formData.value['q'];
+		if (query) {
+			this.router.navigate(['/search', {q: query}]);
+		}
+	}
+
+### Passing Data to Components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

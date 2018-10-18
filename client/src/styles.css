@@ -12,3 +12,7 @@
 .carousel-control.right, .carousel-control.left {
   cursor: pointer;
 }
+
+.text-center .navbar-left, .text-center .navbar-right {
+  float: none !important;
+}

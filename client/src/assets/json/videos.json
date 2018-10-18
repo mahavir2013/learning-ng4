@@ -1,13 +1,18 @@
 [{
   "name": "Welcome",
   "slug": "item-1",
-  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI"
+  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI",
+  "image": "assets/images/nature/4.jpg",
+  "featured": true
 }, {
   "name": "Item 2",
   "slug": "item-2",
-  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI"
+  "embed": "https://www.youtube.com/embed/6wD4V0rvlDI",
+  "image": "assets/images/nature/5.jpg",
+  "featured": false
 }, {
   "name": "Item 3",
   "slug": "item-3",
-  "embed": null
+  "embed": null,
+  "image": "assets/images/nature/6.jpg"
 }]
