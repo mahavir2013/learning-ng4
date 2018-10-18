@@ -100,9 +100,9 @@ Check versions:
 	{{video?.name}}
 
 ### Two Way Data Binding
-import { FormsModule } from '@angular/forms';
-<input type="text" class="form-control" placeholder="Search" name="Search" [(ngModel)]="searchQuery">
-If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
+	import { FormsModule } from '@angular/forms';
+	<input type="text" class="form-control" placeholder="Search" name="Search" [(ngModel)]="searchQuery">
+	If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
 
 ### ngForm Basics
 - Link: https://angular.io/guide/forms
