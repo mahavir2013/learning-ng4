@@ -23,9 +23,10 @@ Check versions:
 ### Selectors & Component
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
-- Link: https://angular.io/guide/router
 
 	RouterModule.forRoot(appRoutes);
+
+- Link: https://angular.io/guide/router
 
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
@@ -41,15 +42,15 @@ Check versions:
 	import { DomSanitizer } from '@angular/platform-browser';
 	this.sanitizer.bypassSecurityTrustResourceUrl(url);
 ### Pipes & Custom Pipes
-- Link: https://angular.io/guide/pipes
-- {{todayDate | date: 'short'}}
-- [src]="getEmbedUrl(item) | safe"
-	
+
+	{{todayDate | date: 'short'}}
+	[src]="getEmbedUrl(item) | safe"
 	transform(value: any, args?: any): any {
-	
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
-		
 	}
+
+- Link: https://angular.io/guide/pipes
+
 ### Bootstrap for Angular // ngx bootstrap
 	npm install ngx-bootstrap --save
 	import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -102,7 +103,8 @@ Check versions:
 ### Two Way Data Binding
 	import { FormsModule } from '@angular/forms';
 	<input type="text" class="form-control" placeholder="Search" name="Search" [(ngModel)]="searchQuery">
-	If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
+
+If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
 
 ### ngForm Basics
 
@@ -115,8 +117,7 @@ Check versions:
 		}
 	}
 
-- Link:
-- https://angular.io/guide/forms
+- Link: https://angular.io/guide/forms
 - https://angular.io/api/forms/NgForm
 
 
