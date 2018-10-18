@@ -23,11 +23,8 @@ Check versions:
 ### Selectors & Component
 ### *ngFor and *ngIf
 ### Mapping Urls with RouterModule
-
 	RouterModule.forRoot(appRoutes);
-
 - Link: https://angular.io/guide/router
-
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
@@ -42,7 +39,6 @@ Check versions:
 	import { DomSanitizer } from '@angular/platform-browser';
 	this.sanitizer.bypassSecurityTrustResourceUrl(url);
 ### Pipes & Custom Pipes
-
 	{{todayDate | date: 'short'}}
 	[src]="getEmbedUrl(item) | safe"
 	transform(value: any, args?: any): any {
