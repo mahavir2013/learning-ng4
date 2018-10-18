@@ -105,8 +105,6 @@ Check versions:
 	If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
 
 ### ngForm Basics
-- Link: https://angular.io/guide/forms
-		https://angular.io/api/forms/NgForm
 
 	<form #myForm="ngForm" (ngSubmit)="submitForm($event, myForm)">
 	<input type="text" name="q" [(ngModel)]="myModelName">
@@ -116,6 +114,11 @@ Check versions:
 			this.router.navigate(['/search', {q: query}]);
 		}
 	}
+
+- Link:
+- https://angular.io/guide/forms
+- https://angular.io/api/forms/NgForm
+
 
 ### Passing Data to Components
 
