@@ -25,6 +25,7 @@ Check versions:
 ### Mapping Urls with RouterModule
 	RouterModule.forRoot(appRoutes);
 - Link: https://angular.io/guide/router
+
 ### Dynamic Routing of Components
 	import { ActivatedRoute } from '@angular/router';
 	A provider allows us to work with route
@@ -44,7 +45,6 @@ Check versions:
 	transform(value: any, args?: any): any {
 		return this.sanitizer.bypassSecurityTrustResourceUrl(value);
 	}
-
 - Link: https://angular.io/guide/pipes
 
 ### Bootstrap for Angular // ngx bootstrap
@@ -99,11 +99,9 @@ Check versions:
 ### Two Way Data Binding
 	import { FormsModule } from '@angular/forms';
 	<input type="text" class="form-control" placeholder="Search" name="Search" [(ngModel)]="searchQuery">
-
 If ngModel is used within a form tag, either the name attribute must be set or the form control must be defined as 'standalone' in ngModelOptions.
 
 ### ngForm Basics
-
 	<form #myForm="ngForm" (ngSubmit)="submitForm($event, myForm)">
 	<input type="text" name="q" [(ngModel)]="myModelName">
 	submitSearch(event: Event, formData) {
@@ -112,10 +110,8 @@ If ngModel is used within a form tag, either the name attribute must be set or t
 			this.router.navigate(['/search', {q: query}]);
 		}
 	}
-
 - Link: https://angular.io/guide/forms
 - https://angular.io/api/forms/NgForm
-
 
 ### Passing Data to Components
 
