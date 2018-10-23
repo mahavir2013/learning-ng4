@@ -9,7 +9,7 @@
   "slug": "item-2",
   "embed": "https://www.youtube.com/embed/6wD4V0rvlDI",
   "image": "assets/images/nature/5.jpg",
-  "featured": false
+  "featured": true
 }, {
   "name": "Item 3",
   "slug": "item-3",

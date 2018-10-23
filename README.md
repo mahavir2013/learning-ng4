@@ -2,12 +2,17 @@
 
 ### [Tutorial: Try Angular 4](https://www.youtube.com/playlist?list=PLEsfXFp6DpzQThMU768hTZInWUqfoyTEW)
 ### [Github for tutorial](https://github.com/codingforentrepreneurs/Try-Angular-v4)
-#### To be continued from: Try Angular v4 // 20 of 28 // Passing Data to Components
+#### To be continued from: Try Angular v4 // 24 of 28 // Router Link & Improved Navigation
 
 ### Getting started
 [Getting Started with Typescript](http://kirr.co/w0bcpk)
 
 [Angular Setup, Install, & Build Guide](https://kirr.co/ne8vf9)
+	Optional:
+	npm uninstall -g @angular/cli
+	npm cache clean --force
+
+	npm install -g @angular/cli@1.4
 
 	mkdir learning-ng4 && cd learning-ng4
 	ng new client
@@ -48,7 +53,8 @@ Check versions:
 - Link: https://angular.io/guide/pipes
 
 ### Bootstrap for Angular // ngx bootstrap
-	npm install ngx-bootstrap --save
+	Remove# npm uninstall ngx-bootstrap --save
+	Add# npm install ngx-bootstrap@2.0.5 --save
 	import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 	imports: [BsDropdownModule.forRoot(),...]
 
@@ -114,7 +120,42 @@ If ngModel is used within a form tag, either the name attribute must be set or t
 - https://angular.io/api/forms/NgForm
 
 ### Passing Data to Components
+	<the-component [passedInput]="inputBingings"></the-component>
+	@Input() passedInput: string;
 
+### Video Service
+	ng g service videos/video
+	import 'rxjs/add/operator/map';
+	import 'rxjs/add/operator/catch';
+	...
+	getList() {
+		return this.http.get(endpoint)
+			.map(response => response.json())
+			.catch(this.handleError);
+	}
+	private handleError(error: any, caught: any): any {
+		console.log(error, caught);
+	}
+	@Component({
+		...
+		providers: [VideoService]
+	})
+	...
+	this.req = this._video.list().subscribe(data => {
+      console.log(data);
+      this.videoList = data as [any];
+    });
+
+### Video Item Model
+	import { TodoItem } from '../todos/todo';
+	
+	todoList: [TodoItem] = [] as [TodoItem];
+	this.todoList = data as [TodoItem];
+	todo: TodoItem
+	this.todo = data as TodoItem;
+
+### Router Link & Improved Navigation
+	
 
 
 
