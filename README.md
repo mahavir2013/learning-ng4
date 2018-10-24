@@ -156,6 +156,28 @@ If ngModel is used within a form tag, either the name attribute must be set or t
 	this.todo = data as TodoItem;
 
 ### Router Link & Improved Navigation
+	<a routerLink="/todos/{{ todo.slug }}" routerLinkActive="active">{{ todo.name }}</a>
+
+### Improve Styling and ngClass
+	 [ngClass]="{'active-class-name': data.active}"
+
+### ngBuild and Deploy to Heroku
+	ng build --prod --output-path ../../learning-ng4-test/public/ --watch
+	https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+	npm install -g heroku
+	"heroku --version": heroku/7.18.3 win32-x64 node-v8.11.3
+	heroku login
+	heroku create learning-ng4
+	Add "Procfile": web: node index.js
+	Add "package.json"
+	Do "npm install" - will create node_modules
+	Run server: "node index.js"
+	Add ".gitignore" file with node_modules/
+	Initialize git: git init, git add --all and git commit -m "Initial commit"
+	git push heroku master
+	Check: https://learning-ng-v4.herokuapp.com/
+	
+	
 	
 
 

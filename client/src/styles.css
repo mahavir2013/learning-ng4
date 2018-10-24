@@ -16,3 +16,7 @@
 .text-center .navbar-left, .text-center .navbar-right {
   float: none !important;
 }
+.img-center {
+  max-width: 800px;
+  margin: 0 auto;
+}

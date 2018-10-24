@@ -33,4 +33,8 @@ export class VideoDetailComponent implements OnInit, OnDestroy {
     this.req.unsubscribe();
   }
 
+  getEmbedUrl(item) {
+    return item.embed;
+  }
+
 }
