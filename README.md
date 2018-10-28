@@ -171,46 +171,46 @@ If ngModel is used within a form tag, either the name attribute must be set or t
 	Add "Procfile": web: node index.js
 	Add "package.json"
 	Do "npm install" - will create node_modules
+	Add "index.js"
 	Run server: "node index.js"
 	Add ".gitignore" file with node_modules/
 	Initialize git: git init, git add --all and git commit -m "Initial commit"
 	git push heroku master
 	Check: https://learning-ng-v4.herokuapp.com/
 	
-	
-	
+### File: package.json
+	{
+	  "name": "try-angular-v4",
+	  "version": "1.0.0",
+	  "description": "ng4 app",
+	  "main": "index.js",
+	  "engines": {
+		"node": "5.9.1"
+	  },
+	  "dependencies": {
+		"ejs": "2.4.1",
+		"express": "4.13.3",
+		"path": "0.12.7",
+		"mongoose": "4.9.3",
+		"body-parser": "1.17.1",
+		"compression": "1.6.2"
+	  }
+	}
 
+### File: index.js
+	var express = require('express');
+	var path = require('path');
+	var app = express();
 
+	const port = process.env.PORT || '5000';
 
+	app.set('port', port);
+	app.use(express.static(__dirname + '/public'));
+	app.get('/[^\.]+$', function(req, res) {
+		res.set('Content-Type', 'text/html')
+			.sendFile(path.join(__dirname, '/public/index.html'));
+	});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	app.listen(app.get('port'), function() {
+		console.log("Node app is running at localhost:" + app.get('port'));
+	});
